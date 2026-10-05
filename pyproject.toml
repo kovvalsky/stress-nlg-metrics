@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stress-nlg-metrics"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+
+basic = [
+    "sacrebleu",
+    "rouge-score",
+    "nltk",
+]
+
+bertscore = [
+    "torch",
+    "transformers",
+    "bert-score",
+]
+
+bartscore = [
+    "torch",
+    "transformers",
+    "string2string",
+]
+
+menli = [
+    "torch",
+    "transformers",
+]
+
+comet = [
+    "unbabel-comet",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
