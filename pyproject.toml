@@ -32,6 +32,10 @@ menli = [
     "transformers",
 ]
 
+bleurt = [
+    "BLEURT @ git+https://github.com/google-research/bleurt.git@master",
+]
+
 comet = [
     "unbabel-comet",
 ]
