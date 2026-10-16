@@ -37,6 +37,7 @@ bleurt = [
 ]
 
 comet = [
+    "transformers>=4.17,<5",
     "sentencepiece>=0.2",
     "pandas>=1.4.1",
     "pytorch-lightning>=2.0",
