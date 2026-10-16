@@ -37,7 +37,13 @@ bleurt = [
 ]
 
 comet = [
-    "unbabel-comet",
+    "sentencepiece>=0.2",
+    "pandas>=1.4.1",
+    "pytorch-lightning>=2.0",
+    "jsonargparse==3.13.1",
+    "sacrebleu>=2.0",
+    "scipy>=1.5.4",
+    "entmax>=1.1",
 ]
 
 [tool.setuptools.packages.find]
