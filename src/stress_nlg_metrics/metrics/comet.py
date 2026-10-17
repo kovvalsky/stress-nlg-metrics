@@ -31,6 +31,7 @@ def comet(
     candidates: list[str],
     batch_size: int = 16,
     model_name: str = DEFAULT_MODEL,
+    src_tr: str = ""
 ) -> list[float]:
     """Compute COMET scores using the current experimental setup.
 
@@ -41,9 +42,17 @@ def comet(
 
     model = _get_model(model_name)
 
+    def detect_src(src, ref, cand):
+        if src == "": return ""
+        if src == "reference": return ref
+        if src == "candidate": return cand
+        raise ValueError(
+                    f"unknown value for src_tr parameter: {src_tr}"
+                )
+
     samples = [
         {
-            "src": candidate,
+            "src": detect_src(src_tr, reference, candidate),
             "mt": candidate,
             "ref": reference,
         }

@@ -35,6 +35,7 @@ menli = [
 bleurt = [
     "BLEURT @ git+https://github.com/google-research/bleurt.git@master",
 ]
+# "BLEURT @ git+https://github.com/google-research/bleurt.git@cebe7e6"
 
 comet = [
     "transformers>=4.17,<5",
